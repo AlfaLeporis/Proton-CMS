@@ -383,4 +383,40 @@ line-height: 1.428571429;
    
 }
 
+ .panel-heading{
+     background-color: #C90000!important;
+     color: white!important;
+ }
 
+ .btn-primary{
+     background-color: #C90000!important;
+ }
+
+ .btn-primary:hover{
+     background-color: rgb(163, 0, 0)!important;
+ }
+
+ a.btn-primary:hover{
+     color: white!important;
+ }
+
+  a.btn-primary:active{
+     color: white!important;
+ }
+
+a{
+    color: #f00;
+}
+
+a:hover{
+    color: rgb(163, 0, 0)!important;
+}
+
+a:active{
+    color: rgb(163, 0, 0)!important;
+}
+
+a:visited{
+    color: #f00;
+    text-decoration: none;
+}
