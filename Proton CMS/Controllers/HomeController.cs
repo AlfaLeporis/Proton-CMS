@@ -10,6 +10,7 @@ namespace Proton_CMS.Controllers
     {
         public ActionResult Index()
         {
+            NLog.LogManager.GetCurrentClassLogger().Info("Test message");
             return View();
         }
     }
