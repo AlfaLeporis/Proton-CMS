@@ -167,7 +167,10 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\ControlPanel\custom.css" />
+    <Content Include="Content\ControlPanel\font-awesome.css" />
     <Content Include="favicon.ico" />
+    <Content Include="fonts\ControlPanel\fontawesome-webfont.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
@@ -181,6 +184,13 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Areas\ControlPanel\Views\web.config" />
+    <Content Include="Areas\ControlPanel\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\ControlPanel\Views\Home\Index.cshtml" />
+    <Content Include="fonts\ControlPanel\fontawesome-webfont.eot" />
+    <Content Include="fonts\ControlPanel\fontawesome-webfont.ttf" />
+    <Content Include="fonts\ControlPanel\fontawesome-webfont.woff" />
+    <Content Include="fonts\ControlPanel\FontAwesome.otf" />
+    <Content Include="fonts\ControlPanel\OpenSans-Regular.ttf" />
     <None Include="NLog.xsd">
       <SubType>Designer</SubType>
     </None>
@@ -188,10 +198,12 @@
     <Content Include="Icon.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\ControlPanel\custom.js" />
     <Content Include="Scripts\jquery-2.1.4.js" />
     <Content Include="Scripts\jquery-2.1.4.min.js" />
     <Content Include="Scripts\jquery-2.1.4.min.map" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\ControlPanel\jquery.metisMenu.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
@@ -215,8 +227,6 @@
     <Folder Include="App_Data\" />
     <Folder Include="Areas\ControlPanel\Models\" />
     <Folder Include="Areas\ControlPanel\Views\Auth\" />
-    <Folder Include="Areas\ControlPanel\Views\Home\" />
-    <Folder Include="Areas\ControlPanel\Views\Shared\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
