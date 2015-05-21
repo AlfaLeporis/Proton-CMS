@@ -191,6 +191,8 @@
     <Content Include="fonts\ControlPanel\fontawesome-webfont.woff" />
     <Content Include="fonts\ControlPanel\FontAwesome.otf" />
     <Content Include="fonts\ControlPanel\OpenSans-Regular.ttf" />
+    <Content Include="Areas\ControlPanel\Views\Shared\_AuthLayout.cshtml" />
+    <Content Include="Areas\ControlPanel\Views\Auth\Index.cshtml" />
     <None Include="NLog.xsd">
       <SubType>Designer</SubType>
     </None>
@@ -226,7 +228,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\ControlPanel\Models\" />
-    <Folder Include="Areas\ControlPanel\Views\Auth\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
