@@ -9,5 +9,10 @@
 </head>
 <body>
     @RenderBody()
+
+    @if (TempData.Any(p => p.Key == "ErrorMessage"))
+    {
+        <div class="alert alert-danger" role="alert">@TempData.First(p => p.Key == "ErrorMessage").Value</div>
+    }
 </body>
 </html>

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Web.Security;
 using Proton_CMS.Services.Interfaces;
 using Proton_CMS.DAL;
 
@@ -16,9 +17,16 @@ namespace Proton_CMS.Services
             this.dbContext = dbContext;
         }
 
-        public bool LogIn(string userName, string password)
+        public bool LogIn(string userName, string password, bool rememberCookie)
         {
-            throw new NotImplementedException();
+            if (dbContext.ProtonConfig.First(p => p.Key == "AdminName").Value == userName &&
+                dbContext.ProtonConfig.First(p => p.Key == "AdminPassword").Value == password)
+            {
+                FormsAuthentication.SetAuthCookie(userName, rememberCookie);
+                return true;
+            }
+
+            return false;
         }
 
         public void LogOut()

@@ -26,14 +26,15 @@ namespace Proton_CMS.Areas.ControlPanel.Controllers
         [HttpPost]
         public ActionResult LogIn(AuthViewModel viewModel)
         {
-            var result = authService.LogIn(viewModel.UserName, viewModel.Password);
+            var result = authService.LogIn(viewModel.UserName, viewModel.Password, viewModel.RememberMe);
             if(result)
             {
-                return RedirectToAction("Index");
+                return RedirectToAction("Index", "Home");
             }
             else
             {
-                return View();
+                TempData.Add("ErrorMessage", "Bad user name or password. Try again.");
+                return RedirectToAction("Index", "Auth");
             }
         }
     }

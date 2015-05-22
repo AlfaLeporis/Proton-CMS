@@ -420,3 +420,10 @@ a:visited{
     color: #f00;
     text-decoration: none;
 }
+
+.alert-danger{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    font-weight: bold;
+}

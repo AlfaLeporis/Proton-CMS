@@ -8,7 +8,7 @@ namespace Proton_CMS.Services.Interfaces
 {
     public interface IAuthService
     {
-        bool LogIn(String userName, String password);
+        bool LogIn(String userName, String password, bool rememberCookie);
         void LogOut();
     }
 }

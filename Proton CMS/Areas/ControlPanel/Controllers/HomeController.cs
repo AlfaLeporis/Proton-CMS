@@ -9,6 +9,7 @@ namespace Proton_CMS.Areas.ControlPanel.Controllers
     public class HomeController : Controller
     {
         // GET: ControlPanel/Home
+        [Authorize]
         public ActionResult Index()
         {
             return View();
