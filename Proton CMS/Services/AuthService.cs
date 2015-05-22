@@ -10,9 +10,9 @@ namespace Proton_CMS.Services
 {
     public class AuthService : IAuthService
     {
-        private DatabaseContext dbContext = null;
+        private IDatabaseContext dbContext = null;
 
-        public AuthService(DatabaseContext dbContext)
+        public AuthService(IDatabaseContext dbContext)
         {
             this.dbContext = dbContext;
         }

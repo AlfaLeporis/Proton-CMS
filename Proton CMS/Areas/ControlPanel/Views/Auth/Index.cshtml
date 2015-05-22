@@ -29,7 +29,7 @@
                                 @Html.CheckBoxFor(p => p.RememberMe, new { type = "checkbox" }) Remember me
                             </label>
                             <span class="pull-right">
-                                <a href="#">Forget password ? </a>
+                                @Html.ActionLink("Forget password?", "RemindPassword", "Auth", null, null)
                             </span>
                         </div>
 

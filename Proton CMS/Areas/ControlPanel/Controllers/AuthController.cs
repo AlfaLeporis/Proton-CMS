@@ -37,5 +37,11 @@ namespace Proton_CMS.Areas.ControlPanel.Controllers
                 return RedirectToAction("Index", "Auth");
             }
         }
+
+        //[HttpGet]
+        //public ActionResult RemindPassword()
+        //{
+
+        //}
     }
 }
