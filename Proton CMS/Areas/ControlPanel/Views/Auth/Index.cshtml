@@ -1,4 +1,4 @@
-﻿
+﻿@model Proton_CMS.ViewModels.AuthViewModel
 @{
     ViewBag.Title = "Index";
     Layout = "~/Areas/ControlPanel/Views/Shared/_AuthLayout.cshtml";
@@ -13,27 +13,28 @@
                     <strong>   Proton Control Panel </strong>
                 </div>
                 <div class="panel-body">
-                    <form role="form">
+                    @using (Html.BeginForm("LogIn", "Auth", FormMethod.Post, new { fole = "form" }))
+                    {
                         <br />
                         <div class="form-group input-group">
                             <span class="input-group-addon"><i class="fa fa-tag"></i></span>
-                            <input type="text" class="form-control" placeholder="Username " />
+                            @Html.TextBoxFor(p => p.UserName, new { type = "text", @class = "form-control", placeholder = "UserName" })
                         </div>
                         <div class="form-group input-group">
                             <span class="input-group-addon"><i class="fa fa-lock"></i></span>
-                            <input type="password" class="form-control" placeholder="Password" />
+                            @Html.TextBoxFor(p => p.Password, new { type="password", @class = "form-control", placeholder = "Password" })
                         </div>
                         <div class="form-group">
                             <label class="checkbox-inline">
-                                <input type="checkbox" /> Remember me
+                                @Html.CheckBoxFor(p => p.RememberMe, new { type = "checkbox" }) Remember me
                             </label>
                             <span class="pull-right">
                                 <a href="#">Forget password ? </a>
                             </span>
                         </div>
 
-                        <a href="index.html" class="btn btn-primary ">Login Now</a>
-                    </form>
+                        <input type="submit" class="btn btn-primary" value="Login Now">
+                    }
                 </div>
 
             </div>

@@ -23,7 +23,7 @@ namespace Proton_CMS.DAL
 
         public override int SaveChanges()
         {
-            return SaveChanges();
+            return base.SaveChanges();
         }
     }
 }

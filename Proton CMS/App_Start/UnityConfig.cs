@@ -40,6 +40,9 @@ namespace Proton_CMS.App_Start
 
             // TODO: Register your types here
             // container.RegisterType<IProductRepository, ProductRepository>();
+
+            container.RegisterType<IDatabaseContext, DatabaseContext>();
+            container.RegisterType<IAuthService, AuthService>();
         }
     }
 }
