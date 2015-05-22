@@ -38,10 +38,13 @@ namespace Proton_CMS.Areas.ControlPanel.Controllers
             }
         }
 
-        //[HttpGet]
-        //public ActionResult RemindPassword()
-        //{
+        [HttpGet]
+        public ActionResult RemindPassword()
+        {
+            authService.RemindPassword();
 
-        //}
+            TempData.Add("InfoMessage", "EMail with your password has been sent. Check your mailbox.");
+            return RedirectToAction("Index", "Auth");
+        }
     }
 }

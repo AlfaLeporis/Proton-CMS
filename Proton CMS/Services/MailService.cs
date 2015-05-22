@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Net.Mail;
+using System.IO;
 using Proton_CMS.DAL;
 using Proton_CMS.Services.Interfaces;
 
@@ -25,9 +26,7 @@ namespace Proton_CMS.Services
 
             var mail = new MailMessage(fromEMail, toEMail, title, content);
             var smtp = new SmtpClient(host, port);
-            smtp.EnableSsl = useSSL;
-
-            smtp.Send(mail);
+            throw new NotImplementedException();
         }
     }
 }

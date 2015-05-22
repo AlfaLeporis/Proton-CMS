@@ -10,5 +10,7 @@ namespace Proton_CMS.Services.Interfaces
     {
         bool LogIn(String userName, String password, bool rememberCookie);
         void LogOut();
+
+        void RemindPassword();
     }
 }
