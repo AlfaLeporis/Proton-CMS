@@ -156,6 +156,7 @@
     <Compile Include="Areas\ControlPanel\Controllers\AuthController.cs" />
     <Compile Include="Areas\ControlPanel\Controllers\HomeController.cs" />
     <Compile Include="Areas\ControlPanel\ControlPanelAreaRegistration.cs" />
+    <Compile Include="Controllers\ErrorController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="DAL\DatabaseContext.cs" />
     <Compile Include="DAL\IDatabaseContext.cs" />
@@ -233,6 +234,8 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Error\Error404.cshtml" />
+    <Content Include="Views\Error\Error500.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

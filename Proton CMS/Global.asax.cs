@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
+using NLog;
 using Proton_CMS.App_Start;
 
 namespace Proton_CMS
@@ -14,6 +15,12 @@ namespace Proton_CMS
         protected void Application_Start()
         {
             new Bootstrap().Init();
+        }
+
+        void Application_Error(object sender, EventArgs e)
+        {
+            var exception = Server.GetLastError();
+            LogManager.GetCurrentClassLogger().FatalException("Fatal error", exception);
         }
     }
 }

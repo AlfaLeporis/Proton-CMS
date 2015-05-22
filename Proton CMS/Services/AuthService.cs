@@ -31,7 +31,7 @@ namespace Proton_CMS.Services
 
         public void LogOut()
         {
-            throw new NotImplementedException();
+            FormsAuthentication.SignOut();
         }
     }
 }
