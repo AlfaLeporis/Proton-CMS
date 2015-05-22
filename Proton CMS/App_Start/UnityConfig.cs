@@ -1,6 +1,9 @@
 using System;
 using Microsoft.Practices.Unity;
 using Microsoft.Practices.Unity.Configuration;
+using Proton_CMS.Services.Interfaces;
+using Proton_CMS.Services;
+using Proton_CMS.DAL;
 
 namespace Proton_CMS.App_Start
 {

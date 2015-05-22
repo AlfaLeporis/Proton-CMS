@@ -7,9 +7,9 @@ using Proton_CMS.Models;
 
 namespace Proton_CMS.DAL
 {
-    public class DatabaseContext : DbContext
+    public class DatabaseContext : DbContext, IDatabaseContext
     {
-        public DbSet<ProtonConfig> ProtonConfig { get; set; }
+        public IDbSet<ProtonConfig> ProtonConfig { get; set; }
 
         public DatabaseContext() : base("MainConnection")
         {
@@ -19,6 +19,11 @@ namespace Proton_CMS.DAL
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
+        }
+
+        public override int SaveChanges()
+        {
+            return SaveChanges();
         }
     }
 }
