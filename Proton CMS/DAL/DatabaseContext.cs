@@ -9,7 +9,7 @@ namespace Proton_CMS.DAL
 {
     public class DatabaseContext : DbContext
     {
-        public DbSet<ProtonConfigModel> ProtonConfig { get; set; }
+        public DbSet<ProtonConfig> ProtonConfig { get; set; }
 
         public DatabaseContext() : base("MainConnection")
         {

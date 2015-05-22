@@ -147,6 +147,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_Start\Bootstrap.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
@@ -157,10 +158,11 @@
     <Compile Include="Areas\ControlPanel\ControlPanelAreaRegistration.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="DAL\DatabaseContext.cs" />
+    <Compile Include="DAL\MigrationConfig.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\ProtonConfigModel.cs" />
+    <Compile Include="Models\ProtonConfig.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

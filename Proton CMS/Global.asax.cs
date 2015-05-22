@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
+using Proton_CMS.App_Start;
 
 namespace Proton_CMS
 {
@@ -12,10 +13,7 @@ namespace Proton_CMS
     {
         protected void Application_Start()
         {
-            AreaRegistration.RegisterAllAreas();
-            FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
-            RouteConfig.RegisterRoutes(RouteTable.Routes);
-            BundleConfig.RegisterBundles(BundleTable.Bundles);
+            new Bootstrap().Init();
         }
     }
 }
