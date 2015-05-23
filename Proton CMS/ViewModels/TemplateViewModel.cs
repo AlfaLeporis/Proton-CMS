@@ -13,5 +13,6 @@ namespace Proton_CMS.ViewModels
         public String Version { get; set; }
         public String FolderName { get; set; }
         public String Description { get; set; }
+        public bool IsCurrent { get; set; }
     }
 }

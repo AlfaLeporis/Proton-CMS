@@ -20,7 +20,7 @@ namespace Proton_CMS.Areas.ControlPanel.Controllers
         public ActionResult Index()
         {
             var templates = templatesService.GetAllTemplates();
-            return View();
+            return View(templates);
         }
     }
 }

@@ -18,15 +18,19 @@ namespace Proton_CMS.Services
         public TemplatesService(IDatabaseContext dbContext)
         {
             this.dbContext = dbContext;
+            CurrentTemplate = int.Parse(dbContext.ProtonConfig.First(p => p.Key == "CurrentTemplate").Value);
         }
 
         public List<TemplateViewModel> GetAllTemplates()
         {
-            return dbContext.Templates
+            var viewModels = dbContext.Templates
                 .ToList()
                 .Select(p => new TemplateViewModel().InjectFrom(p))
                 .Cast<TemplateViewModel>()
                 .ToList();
+
+            viewModels.First(p => p.ID == CurrentTemplate).IsCurrent = true;
+            return viewModels;
         }
     }
 }
