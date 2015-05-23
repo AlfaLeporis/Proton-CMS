@@ -39,6 +39,13 @@ namespace Proton_CMS.Areas.ControlPanel.Controllers
         }
 
         [HttpGet]
+        public ActionResult LogOut()
+        {
+            authService.LogOut();
+            return RedirectToAction("Index");
+        }
+
+        [HttpGet]
         public ActionResult RemindPassword()
         {
             authService.RemindPassword();
