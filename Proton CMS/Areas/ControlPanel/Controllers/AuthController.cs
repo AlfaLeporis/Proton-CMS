@@ -42,7 +42,7 @@ namespace Proton_CMS.Areas.ControlPanel.Controllers
         public ActionResult LogOut()
         {
             authService.LogOut();
-            return View("Index");
+            return RedirectToAction("Index");
         }
 
         [HttpGet]
@@ -51,7 +51,7 @@ namespace Proton_CMS.Areas.ControlPanel.Controllers
             authService.RemindPassword();
 
             TempData.Add("InfoMessage", "EMail with your password has been sent. Check your mailbox.");
-            return View("Index");
+            return RedirectToAction("Index");
         }
     }
 }

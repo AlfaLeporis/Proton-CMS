@@ -55,5 +55,17 @@ namespace Proton_CMS.Areas.ControlPanel.Controllers
             TempData.Add("InfoMessage", "Template installed successfully.");
             return View();
         }
+
+        public ActionResult SetCurrentTemplate(int id)
+        {
+            templatesService.SetCurrentTemplate(id);
+            return RedirectToAction("Index");
+        }
+
+        public ActionResult RemoveTemplate(int id)
+        {
+            templatesService.RemoveTemplate(id);
+            return RedirectToAction("Index");
+        }
     }
 }

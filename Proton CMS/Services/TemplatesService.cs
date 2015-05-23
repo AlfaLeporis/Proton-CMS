@@ -58,8 +58,35 @@ namespace Proton_CMS.Services
             templateModel.Version = xmlDoc.GetElementsByTagName("Version")[0].InnerText;
             templateModel.Author = xmlDoc.GetElementsByTagName("Author")[0].InnerText;
             templateModel.Description = xmlDoc.GetElementsByTagName("Description")[0].InnerText;
+            templateModel.FolderName = templatePath.Split('\\').Last();
 
             dbContext.Templates.Add(templateModel);
+            dbContext.SaveChanges();
+
+            File.Delete(fileName);
+        }
+
+        public void SetCurrentTemplate(int id)
+        {
+            if (!dbContext.Templates.Any(p => p.ID == id))
+                throw new Exception("Template id not found");
+
+            dbContext.ProtonConfig.First(p => p.Key == "CurrentTemplate").Value = id.ToString();
+            CurrentTemplate = id;
+
+            dbContext.SaveChanges();
+        }
+
+        public void RemoveTemplate(int id)
+        {
+            if (!dbContext.Templates.Any(p => p.ID == id))
+                throw new Exception("Template id not found");
+
+            var templateFolder = dbContext.Templates.First(p => p.ID == id).FolderName;
+            var dest = HttpContext.Current.Server.MapPath("/Templates/") + "/" + templateFolder;
+            Directory.Delete(dest, true);
+
+            dbContext.Templates.Remove(dbContext.Templates.First(p => p.ID == id));
             dbContext.SaveChanges();
         }
     }

@@ -12,5 +12,7 @@ namespace Proton_CMS.Services.Interfaces
 
         List<TemplateViewModel> GetAllTemplates();
         void InstallTemplate(String fileName);
+        void SetCurrentTemplate(int id);
+        void RemoveTemplate(int id);
     }
 }
