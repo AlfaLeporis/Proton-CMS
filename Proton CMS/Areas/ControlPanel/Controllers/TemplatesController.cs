@@ -52,7 +52,7 @@ namespace Proton_CMS.Areas.ControlPanel.Controllers
                 return View();
             }
 
-            TempData.Add("SuccessMessage", "Template installed successfully.");
+            TempData.Add("InfoMessage", "Template installed successfully.");
             return View();
         }
     }
