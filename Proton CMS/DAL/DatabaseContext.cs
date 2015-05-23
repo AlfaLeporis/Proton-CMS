@@ -10,6 +10,7 @@ namespace Proton_CMS.DAL
     public class DatabaseContext : DbContext, IDatabaseContext
     {
         public IDbSet<ProtonConfig> ProtonConfig { get; set; }
+        public IDbSet<TemplateModel> Templates { get; set; }
 
         public DatabaseContext() : base("MainConnection")
         {

@@ -11,6 +11,7 @@ namespace Proton_CMS.DAL
     public interface IDatabaseContext
     {
         IDbSet<ProtonConfig> ProtonConfig { get; set; }
+        IDbSet<TemplateModel> Templates { get; set; }
 
         int SaveChanges();
     }

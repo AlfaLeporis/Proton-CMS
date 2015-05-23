@@ -16,12 +16,14 @@ namespace Proton_CMS.App_Start
 
             ViewLocationFormats = new string[]
             {
+                "~/Areas/ControlPanel/Views/{1}/{0}.cshtml",
                 "~/Templates/" + TemplateName + "/{1}/{0}.cshtml",
                 "~/Templates/" + TemplateName + "/Shared/{0}.cshtml",
             };
 
             PartialViewLocationFormats = new string[]
             {
+                "~/Areas/ControlPanel/{1}/{0}.cshtml",
                 "~/Templates/" + TemplateName + "/{1}/{0}.cshtml",
                 "~/Templates/" + TemplateName + "/Shared/{0}.cshtml",
             };

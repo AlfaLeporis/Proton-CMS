@@ -44,6 +44,7 @@ namespace Proton_CMS.App_Start
             container.RegisterType<IDatabaseContext, DatabaseContext>();
             container.RegisterType<IAuthService, AuthService>();
             container.RegisterType<IMailService, MailService>();
+            container.RegisterType<ITemplatesService, TemplatesService>();
         }
     }
 }

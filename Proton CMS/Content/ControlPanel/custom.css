@@ -331,7 +331,7 @@ border:0px solid black;
     background: #A70303;
 }
 .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
-background-color: #B40101;
+background-color: #f00;
 }
 .navbar-default .navbar-toggle {
 border-color: #fff;
@@ -392,15 +392,19 @@ line-height: 1.428571429;
      background-color: #C90000!important;
  }
 
- .btn-primary:hover{
+ .btn:hover{
      background-color: rgb(163, 0, 0)!important;
  }
 
- a.btn-primary:hover{
+ a.btn:hover{
      color: white!important;
  }
  
- a.btn-primary:active{
+ a.btn:active{
+     color: white!important;
+ }
+
+ a.btn:visited{
      color: white!important;
  }
 
@@ -426,4 +430,9 @@ a:visited{
     top: 0;
     width: 100%;
     font-weight: bold;
+}
+
+.container{
+    border-bottom: 1px solid rgb(235, 235, 235);
+    width: 100%!important;
 }
