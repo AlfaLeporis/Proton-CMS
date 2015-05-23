@@ -32,5 +32,10 @@ namespace Proton_CMS.Services
             viewModels.First(p => p.ID == CurrentTemplate).IsCurrent = true;
             return viewModels;
         }
+
+        public void InstallTemplate(String fileName)
+        {
+
+        }
     }
 }

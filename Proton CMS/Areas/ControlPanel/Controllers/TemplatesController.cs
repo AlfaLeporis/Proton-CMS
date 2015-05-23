@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.IO;
 using Proton_CMS.Services.Interfaces;
 
 namespace Proton_CMS.Areas.ControlPanel.Controllers
@@ -26,6 +27,32 @@ namespace Proton_CMS.Areas.ControlPanel.Controllers
         [HttpGet]
         public ActionResult AddTemplate()
         {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult AddTemplate(HttpPostedFileBase file)
+        {
+            if (file.ContentType != "application/zip" && file.ContentType != "application/x-zip-compressed")
+            {
+                TempData.Add("ErrorMessage", "Template must be in zip file! Try again.");
+                return View();
+            }
+
+            var fileName = Server.MapPath("/Tmp") + "\\" + DateTime.Now.Ticks.ToString() + ".zip";
+            file.SaveAs(fileName);
+
+            try
+            {
+                templatesService.InstallTemplate(fileName);
+            }
+            catch
+            {
+                TempData.Add("ErrorMessage", "Error while installing template.");
+                return View();
+            }
+
+            TempData.Add("SuccessMessage", "Template installed successfully.");
             return View();
         }
     }

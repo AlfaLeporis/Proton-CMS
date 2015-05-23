@@ -246,11 +246,12 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Templates\Default\Error\Error404.cshtml" />
     <Content Include="Templates\Default\Error\Error500.cshtml" />
-    <Content Include="Templates\Default\a.config" />
+    <Content Include="Templates\Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\ControlPanel\Models\" />
+    <Folder Include="Tmp\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

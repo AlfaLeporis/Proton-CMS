@@ -426,7 +426,7 @@ a:visited{
 }
 
 .alert-danger{
-    position: absolute;
+    display: block;
     top: 0;
     width: 100%;
     font-weight: bold;
@@ -437,10 +437,15 @@ a:visited{
     width: 100%!important;
 }
 
-.panel-table{
+.panel-margin{
     margin-top: 30px;
 }
 
 .btn-success[disabled]{
     background-color: rgb(0,120,0)
+}
+
+.form-group{
+    margin-left: 0px!important;
+    margin-right: 15px!important;
 }
