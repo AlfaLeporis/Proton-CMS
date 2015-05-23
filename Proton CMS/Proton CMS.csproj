@@ -149,6 +149,7 @@
   <ItemGroup>
     <Compile Include="App_Start\Bootstrap.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\CustomViewEngine.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\UnityConfig.cs" />
@@ -233,10 +234,11 @@
     <Content Include="Views\Web.config" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
-    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Templates\Default\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Error\Error404.cshtml" />
-    <Content Include="Views\Error\Error500.cshtml" />
+    <Content Include="Templates\Default\Error\Error404.cshtml" />
+    <Content Include="Templates\Default\Error\Error500.cshtml" />
+    <Content Include="Templates\Default\Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

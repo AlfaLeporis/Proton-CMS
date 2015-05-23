@@ -16,6 +16,7 @@ namespace Proton_CMS.App_Start
         {
             InitFramework();
             InitDatabase();
+            InitViewEngine();
         }
 
         private void InitFramework()
@@ -34,6 +35,12 @@ namespace Proton_CMS.App_Start
             var dbTest = new DatabaseContext();
             dbTest.Database.Initialize(true);
             dbTest.Dispose();
+        }
+
+        public void InitViewEngine()
+        {
+            ViewEngines.Engines.Clear();
+            ViewEngines.Engines.Add(new CustomViewEngine());
         }
     }
 }
