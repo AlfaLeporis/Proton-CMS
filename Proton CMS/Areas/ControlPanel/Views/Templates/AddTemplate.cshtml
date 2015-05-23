@@ -1,0 +1,23 @@
+﻿@{
+    ViewBag.Title = "AddTemplate";
+    Layout = "~/Areas/ControlPanel/Views/Shared/_Layout.cshtml";
+}
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        Templates
+    </div>
+    <nav class="navbar navbar-default navbar-static-top">
+        <div class="container">
+            <ul class="nav navbar-nav">
+                <li class="@Html.SetActiveFlag("Index")">
+                    @Html.ActionLink("Installed templates", "Index", "Templates", null, null)
+                </li>
+                <li class="@Html.SetActiveFlag("AddTemplate")">
+                    @Html.ActionLink("Add new template", "AddTemplate", "Templates", null, null)
+                </li>
+            </ul>
+        </div>
+
+    </nav>
+</div>

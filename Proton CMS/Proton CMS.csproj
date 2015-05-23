@@ -166,6 +166,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Infrastructure\HtmlHelpers.cs" />
     <Compile Include="Models\ProtonConfig.cs" />
     <Compile Include="Models\TemplateModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -211,6 +212,7 @@
     <Content Include="Areas\ControlPanel\Views\Shared\_AuthLayout.cshtml" />
     <Content Include="Areas\ControlPanel\Views\Auth\Index.cshtml" />
     <Content Include="Areas\ControlPanel\Views\Templates\Index.cshtml" />
+    <Content Include="Areas\ControlPanel\Views\Templates\AddTemplate.cshtml" />
     <None Include="NLog.xsd">
       <SubType>Designer</SubType>
     </None>
@@ -244,7 +246,7 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Templates\Default\Error\Error404.cshtml" />
     <Content Include="Templates\Default\Error\Error500.cshtml" />
-    <Content Include="Templates\Default\Web.config" />
+    <Content Include="Templates\Default\a.config" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

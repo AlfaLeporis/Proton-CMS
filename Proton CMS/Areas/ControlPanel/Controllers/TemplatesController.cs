@@ -22,5 +22,11 @@ namespace Proton_CMS.Areas.ControlPanel.Controllers
             var templates = templatesService.GetAllTemplates();
             return View(templates);
         }
+
+        [HttpGet]
+        public ActionResult AddTemplate()
+        {
+            return View();
+        }
     }
 }
